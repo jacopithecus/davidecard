@@ -29,12 +29,12 @@
         .birthday-gift:before {
             content:"";
             position: absolute;
-            width: 170px;
-            height:20px;
+            width: 340px;
+            height:40px;
             border-radius:50%;
             background-color: rgba(0,0,0,0.4);
-            top:90px;
-            left:-10px;
+            top:180px;
+            left:-20px;
         }
 
         input#click {
@@ -43,35 +43,56 @@
 
         .gift {
             position: relative;
-            width: 150px;
-            height: 100px;
+            width: 300px;
+            height: 200px;
             background-color: #e9c46a;
+        }
+
+        .click span::after {
+            content: url("data:image/svg+xml,%3Csvg fill='%23000000' height='40px' width='40px' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 203.079 203.079' xml:space='preserve'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M192.231,104.082V102c0-12.407-10.094-22.5-22.5-22.5c-2.802,0-5.484,0.519-7.961,1.459 C159.665,70.722,150.583,63,139.731,63c-2.947,0-5.76,0.575-8.341,1.61C128.667,55.162,119.624,48,109.231,48 c-2.798,0-5.496,0.541-8,1.516V22.5c0-12.407-10.094-22.5-22.5-22.5s-22.5,10.093-22.5,22.5v66.259 c-3.938-5.029-8.673-9.412-14.169-11.671c-6.133-2.52-12.587-2.219-18.667,0.872c-11.182,5.686-15.792,19.389-10.277,30.548 l27.95,56.563c0.79,1.552,19.731,38.008,54.023,38.008h40c31.54,0,57.199-25.794,57.199-57.506l-0.031-41.491H192.231z M135.092,188.079h-40c-24.702,0-40.091-28.738-40.646-29.796l-27.88-56.42c-1.924-3.893-0.33-8.519,3.629-10.532 c2.182-1.11,4.081-1.223,6.158-0.372c8.281,3.395,16.41,19.756,19.586,29.265l2.41,7.259l12.883-4.559V22.5 c0-4.136,3.364-7.5,7.5-7.5s7.5,3.364,7.5,7.5V109h0.136h14.864h0.136V71c0-4.187,3.748-8,7.864-8c4.262,0,8,3.505,8,7.5v15v26h15 v-26c0-4.136,3.364-7.5,7.5-7.5s7.5,3.364,7.5,7.5V102v16.5h15V102c0-4.136,3.364-7.5,7.5-7.5s7.5,3.364,7.5,7.5v10.727h0.035 l0.025,32.852C177.291,169.014,158.36,188.079,135.092,188.079z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+            width: 5px;
+            height: 20px;
+            display: inline-block;
+            margin-left: 240px;
+            margin-top: 25px;
+            position: absolute;
+        }
+
+        @keyframes cursor-blink {
+            0% {
+                opacity: 0;
+            }
+        }
+
+        .click span::after {
+            /*code commented for brevity*/
+            animation: cursor-blink 1.5s steps(2) infinite;
         }
 
         .gift:before {
             content:"";
             position: absolute;
-            width: 25px;
-            height: 100px;
+            width: 50px;
+            height: 200px;
             background-color: #e76f51;
-            left:62px;
+            left:124px;
         }
 
         .gift:after {
             content:"";
             position: absolute;
             box-shadow: inset 0 10px rgba(0,0,0,0.3);
-            width: 150px;
-            height: 100px;
+            width: 300px;
+            height: 200px;
         }
 
         .click {
             position: absolute;
             background-color: #e9c46a;
-            width: 170px;
-            height: 40px;
-            top:-40px;
-            left:-10px;
+            width: 340px;
+            height: 80px;
+            top:-80px;
+            left:-20px;
             transform-origin: bottom left;
             transition: .3s;
             cursor: pointer;
@@ -80,24 +101,24 @@
         .click:before {
             content:"";
             position: absolute;
-            width: 25px;
-            height: 40px;
+            width: 50px;
+            height: 80px;
             background-color: #e76f51;
-            left:69px;
+            left:138px;
         }
 
         .click:after {
             content:"";
             position: absolute;
-            width: 5px;
+            width: 10px;
             height: 0;
             border-bottom: 30px solid #e76f51;
             border-top: 30px solid #e76f51;
             border-left: 0px solid transparent;
             border-right: 30px solid transparent;
             transform: rotate(-90deg);
-            left:65px;
-            top:-47px;
+            left:144px;
+            top:-52px;
         }
 
         #click:checked + .click {
@@ -111,11 +132,11 @@
             font-size: 37px;
             text-align: center;
             z-index:-1;
-            left:5px;
+            left:10px;
         }
 
         #click:checked ~ .wishes {
-            transform: translateY(-100px);
+            transform: translateY(-200px);
         }
 
         #click:checked ~ .sparkles {
@@ -127,22 +148,22 @@
         .sparkles {
             position: absolute;
             display: none;
-            top:-15px;
+            top:-30px;
             z-index:-2;
-            left:40px;
+            left:80px;
         }
 
         .spark1, .spark2, .spark3, .spark4, .spark5, .spark6 {
             position: absolute;
             background-color: #fee440;
             border-radius:50%;
-            top:-9px;
+            top:-18px;
             z-index:-1;
         }
 
         .spark1 {
-            width: 8px;
-            height:8px;
+            width: 16px;
+            height:16px;
             left:30px;
             top:-9px;
             animation: fire 0.9s ease-in-out infinite, color 0.4s linear infinite;
@@ -151,88 +172,88 @@
         .spark1:before {
             content:"";
             position: absolute;
-            width:5px;
-            height:5px;
-            top:8px;
-            left:11px;
+            width:10px;
+            height:10px;
+            top:16px;
+            left:22px;
             background-color: #fee440;
             border-radius:50%;
         }
 
         .spark2 {
-            width: 9px;
-            height:9px;
-            left:33px;
-            top:-5px;
+            width: 18px;
+            height:18px;
+            left:66px;
+            top:-10px;
             animation: fire2 0.28s ease-in-out infinite, color 0.4s linear infinite;
         }
 
         .spark2:before {
             content:"";
             position: absolute;
-            width:5px;
-            height:5px;
-            top:12px;
-            left:3px;
+            width:10px;
+            height:10px;
+            top:24px;
+            left:6px;
             background-color: #fee440;
             border-radius:50%;
         }
 
         .spark3 {
-            width: 8.5px;
-            height:8.5px;
-            left:33px;
-            top:-5px;
+            width: 17px;
+            height:17px;
+            left:66px;
+            top:-10px;
             animation: fire3 0.36s ease-in-out infinite, color2 0.4s linear infinite;
         }
 
         .spark3:before {
             content:"";
             position: absolute;
-            width:5px;
-            height:5px;
-            top:12px;
-            left:-1px;
+            width:10px;
+            height:10px;
+            top:24px;
+            left:-2px;
             background-color: #fee440;
             border-radius:50%;
         }
 
         .spark4 {
-            width: 7px;
-            height:7px;
-            left:27px;
-            top:-5px;
+            width: 14px;
+            height:14px;
+            left:54px;
+            top:-10px;
             animation: fire2 0.24s ease-in-out infinite, color2 0.2s linear infinite;
         }
 
         .spark5 {
-            width: 7px;
-            height:7px;
-            left:29px;
-            top:-5px;
+            width: 14px;
+            height:14px;
+            left:58px;
+            top:-10px;
             animation: fire3 0.45s ease-in-out infinite, color 0.2s linear infinite;
         }
 
         .spark6 {
-            width: 6px;
-            height:6px;
-            left:29px;
-            top:-5px;
+            width: 12px;
+            height:12px;
+            left:58px;
+            top:-10px;
             animation: fire 0.35s ease-in-out infinite, color2 0.2s linear infinite;
         }
 
         @keyframes fire3 {
-            100% { transform:translateX(20px) translateY(-93px);
+            100% { transform:translateX(40px) translateY(-186px);
                 opacity: 0.3; }
         }
 
         @keyframes fire2 {
-            100% { transform:translateX(-5px) translateY(-90px);
+            100% { transform:translateX(-10px) translateY(-180px);
                 opacity: 0.3; }
         }
 
         @keyframes fire {
-            100% { transform:translateX(-25px) translateY(-95px);
+            100% { transform:translateX(-50px) translateY(-190px);
                 opacity: 0.3; }
         }
 
@@ -249,12 +270,12 @@
 </head>
 <body>
 
-<div class="flex-container">
+<div class="flex-container" style="margin-top: 50px;">
     <div class="birthday-gift">
         <div class="gift">
             <input id='click' type='checkbox'>
-            <label class='click' for='click'></label>
-            <div class="wishes"><img src="fizik.png" height="100px" /></div>
+            <label class='click' for='click'><span></span></label>
+            <div class="wishes"><img src="fizik.png" height="200px" /></div>
             <div class="sparkles">
                 <div class="spark1"></div>
                 <div class="spark2"></div>
@@ -267,7 +288,7 @@
     </div>
 </div>
 
-<div id="testo-bello" class="flex-container" style="width: 100%; clear: both; text-align: center; font-size: xxx-large">AUGURI DA LUCIA GIANCARLO MARTA & APO</div>
+<div id="testo-bello" class="flex-container" style="width: 90%; clear: both; text-align: center; font-size: xxx-large;">AUGURI DA LUCIA GIANCARLO MARTA & APO</div>
 
 <div></div>
 <div></div><div></div><div></div>
@@ -287,7 +308,7 @@
                 divtestonuovo += ' ';
                 continue;
             }
-            
+
             do {
                 color = colori[Math.floor(Math.random()*colori.length)];
             } while(color == lastColor);

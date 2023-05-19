@@ -283,6 +283,11 @@
 
         for (var i = 0; i < divtesto.length; i++) {
 
+            if(divtesto.charAt(i) == ' ') {
+                divtestonuovo += ' ';
+                continue;
+            }
+            
             do {
                 color = colori[Math.floor(Math.random()*colori.length)];
             } while(color == lastColor);
